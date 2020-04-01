@@ -4,7 +4,7 @@
 
 ## Installation
 
-### Run SQL server in a Docker
+### Run SQL server in Docker
 
 #### Using Docker Compose
 
