@@ -1,0 +1,10 @@
+version: "3"
+services:
+ webshop-db:
+  container_name: webshop-db
+  image: "mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04"
+  environment:
+   SA_PASSWORD: "Your_password123"
+   ACCEPT_EULA: "Y"
+  ports:
+   - "1401:1433"
