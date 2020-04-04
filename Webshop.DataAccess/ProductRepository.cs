@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Webshop.DataAccess;
 using Webshop.Entities;
 
@@ -15,9 +16,10 @@ namespace Webshop.Models
             _context = context;
         }
 
-        public IEnumerable<Product> GetAll()
+        public async Task<IEnumerable<Product>> GetAll()
         {
-            return _context.Products.ToArray();
+            var result = await _context.Products.ToArrayAsync();
+            return result;
         }
     }
 }

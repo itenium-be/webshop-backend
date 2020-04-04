@@ -21,7 +21,7 @@ namespace Webshop.WebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAllProducts()
+        public Task<IEnumerable<Product>> GetAllProducts()
         {
             return _productRepository.GetAll();
         }

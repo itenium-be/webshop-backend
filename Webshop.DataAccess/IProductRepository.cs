@@ -8,6 +8,6 @@ namespace Webshop.Models
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetAll();
+        Task<IEnumerable<Product>> GetAll();
     }
 }
