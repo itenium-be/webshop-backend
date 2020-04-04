@@ -13,5 +13,7 @@ namespace Webshop.Entities
         public string Description { get; set; }
         public int Stock { get; set; }
         public string SKU { get; set; }
+
+        public override string ToString() => $"{Name}, €{Price} ({Id})";
     }
 }
