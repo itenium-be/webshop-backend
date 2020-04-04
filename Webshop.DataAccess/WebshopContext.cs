@@ -16,10 +16,15 @@ namespace Webshop.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Of als alternatief:
+            // modelBuilder.Entity<Product>().HasKey(x => x.Id);
+            // Ander alternatief:
+            // modelBuilder.Entity<Product>().HasKey(nameof(Product.Id));
+
             modelBuilder.Entity<Product>().HasData(
                     new Product
                     {
-                        Id = "1",
+                        Id = 1,
                         Name = "VIRGIL TRUCKER - Spijkerjas",
                         Description = "This is a description",
                         SKU = "1589420",
@@ -29,7 +34,7 @@ namespace Webshop.DataAccess
                     },
                     new Product
                     {
-                        Id = "2",
+                        Id = 2,
                         Name = "ASOS DESIGN smart tapered trousers in black",
                         Description = "This is a description",
                         SKU = "1572163",

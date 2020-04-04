@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Webshop.Entities
 {
     public class Product
     {
-        public string Id { get; set; }
+        [Required, Key]
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public int Price { get; set; }
